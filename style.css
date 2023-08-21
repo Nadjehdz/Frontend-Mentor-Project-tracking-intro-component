@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box; 
+}
+body {
+    font-size: 18px;
+    font-family: "Barlow", sans-serif;
+    color: hsl(230, 29%, 20%);
+    background-color: #fff;
+    overflow-x: hidden;
+    scroll-padding-right: 0;
+  }
+.humburger{
+    display: none;
+}
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    margin: 3px;
+}
+header{
+    font-family: 'Barlow Condensed', sans-serif;
+    position: relative;
+    display: flex;
+    height: 120px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.graydiv{
+    position: absolute;
+    background-color: var(--Light-Grayish-Blue);
+    width: 57%;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 80px;
+    height: 600px;
+    z-index: -2;
+}
+
+header > div{
+    width:20%
+}
+nav > ul{
+    display: flex;
+    align-items: center;
+    flex-flow: row ;
+}
+nav > ul > li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav > ul > li > a{
+    z-index: 1;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    color: var(--Very-Dark-Blue);
+}
+a:hover{
+    text-decoration: underline;
+}
+.point{
+    background-color: var(--Grayish-Blue);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+.linedecoration{
+    display: none;
+}
+.login{
+    color: var(--Grayish-Blue);
+}
+.line2-nav{
+    opacity: 0;
+}
+.line1-nav{
+    position: relative;
+    top: 12px;
+    transform: rotate(45deg);
+}
+.line3-nav{
+    position: relative;
+    bottom: 5px;
+    transform: rotate(-45deg);
+}
+@media (max-width : 1024px){
+    .humburger{
+        display: flex;
+        flex-flow: column;
+        width: 35px;
+        cursor: pointer;
+    }
+    .point{
+        width: 100%;
+        height: 2px;
+        border-radius: 5px;
+    }
+    .pointnav{
+        width: 60%;
+    }
+    nav{
+        position: absolute;
+        top: 120px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 20px;
+        z-index: 10;
+        display: none;
+        padding: 20px 0;
+        box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2),10px 0 10px rgba(0, 0, 0, 0.2);
+    }
+    nav > ul{
+        display: flex;
+        place-items: center;
+        height: 100%;
+        flex-flow: column; 
+        justify-content: space-evenly;
+    }
+    .nav-resp{
+        display: block;
+        height: 300px;
+    }
+}
+img{
+    max-width: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column-reverse;
+		padding: 4rem 0;
+}
+.content article:last-child img {
+    width: calc(125vw);
+  }
+  .content h1 {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 6rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: hsl(231, 7%, 65%);
+		margin-top: 5px;
+		margin-bottom: 50px;
+  }
+  
+.content h1 span{
+  background-color: var(--Very-Dark-Blue);
+  color: white;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  letter-spacing: 0;
+  font-weight:300;
+  font-size: 17px;
+}
+.content h2 {
+	
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+		font-stretch:extra-expanded;
+		
+
+}
+
+.content .pro{
+    margin-bottom: 50px;
+		color : hsl(230, 11%, 40%);
+}
+.content .btn button {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Barlow Condensed", sans-serif;
+    background-color: hsl(0, 100%, 68%);
+    color: #fff;
+    padding: 0.625rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-family: "Barlow Condensed", sans-serif;
+    border-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.content .btn span {
+    font-size: 11px;
+    color: hsl(231, 7%, 65%);
+    margin-left: 1rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+		box-shadow: none;
+    
+  }
+  .attribution {
+    font-size: 14px;
+    text-align: center;
+}
+.text-content{
+    z-index: 1;
+}  
+  @media (min-width: 1024px){
+    .content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
+        margin: auto;
+        place-items: center;
+        padding: 6rem 0;
+      }
+      .content article:last-child {
+        position: absolute;
+        right: -16rem;
+      }
+      .content article:last-child img {
+        width: auto;
+      }
+  }
